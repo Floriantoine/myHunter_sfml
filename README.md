@@ -1,5 +1,6 @@
 # myHunter_Csfml
 ## Duck Hunt type game, in Csfml, created as part of a first year Epitech project.
+(First project with SFML)
 
 **Mandatory:**  
 - [ ] CSFML  
