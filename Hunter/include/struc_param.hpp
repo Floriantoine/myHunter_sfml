@@ -70,5 +70,6 @@ typedef struct
     int score;
     int level;
     int intro;
+    std::string executablePath;
 } param_t;
 #endif

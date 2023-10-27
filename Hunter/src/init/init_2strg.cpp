@@ -1,25 +1,26 @@
 #include "../../include/all.hpp"
 
-void mun_hit(lib_t *strG)
+void mun_hit(lib_t *strG, std::string exePath)
 {
-    strG->mun.Tex.loadFromFile("../Hunter/resources/mun.png");
-    strG->mun.TexB.loadFromFile("../Hunter/resources/munB.png");
-    strG->hit.Tex.loadFromFile("../Hunter/resources/hit.png");
+    strG->mun.Tex.loadFromFile(exePath + "../../Hunter/resources/mun.png");
+    strG->mun.TexB.loadFromFile(exePath + "../../Hunter/resources/munB.png");
+    strG->hit.Tex.loadFromFile(exePath + "../../Hunter/resources/hit.png");
 }
 
-void pipe_init(lib_t *strG)
+void pipe_init(lib_t *strG, std::string exePath)
 {
-    strG->pipe.Tex.loadFromFile("../Hunter/resources/pipe.png");
+    strG->pipe.Tex.loadFromFile(exePath + "../../Hunter/resources/pipe.png");
 }
 
-void home(lib_t *strG)
+void home(lib_t *strG, std::string exePath)
 {
-    strG->menu.Tex.loadFromFile("../Hunter/resources/menuback.jpg");
+    strG->menu.Tex.loadFromFile(
+        exePath + "../../Hunter/resources/menuback.jpg");
 }
 
-void init_2strg(lib_t *strG)
+void init_2strg(lib_t *strG, std::string exePath)
 {
-    mun_hit(strG);
-    home(strG);
-    pipe_init(strG);
+    mun_hit(strG, exePath);
+    home(strG, exePath);
+    pipe_init(strG, exePath);
 }

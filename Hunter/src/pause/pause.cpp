@@ -8,7 +8,8 @@ void pause_main(param_t *params, lib_t *strG, sound_t *sound)
     sf::Vector2f pos = {350, 90};
 
     params->window.get()->setMouseCursorVisible(true);
-    params->pause.Tex.loadFromFile("../Hunter/resources/pause.png");
+    params->pause.Tex.loadFromFile(
+        params->executablePath + "../../Hunter/resources/pause.png");
     while (params->pause.on_off == 1) {
         while (params->window.get()->pollEvent(params->pause.event)) {
             evt(params, sound);
