@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** verif.c
-*/
-
 #include "../include/all.hpp"
 
 void reset(duck_t *duck)

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** mun.c
-*/
-
 #include "../include/all.hpp"
 
 void dead_mun(param_t *params, int a, int y, lib_t *strG)

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** click.c
-*/
-
 #include "../../include/all.hpp"
 
 void click_start(param_t *params, sound_t *sound)

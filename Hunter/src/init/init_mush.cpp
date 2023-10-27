@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** init_mush.c
-*/
-
 #include "../../include/all.hpp"
 
 void init_mushroom(anim_t *strA)
 {
-    strA->mushroom.Tex.loadFromFile("resources/mushroom.png");
+    strA->mushroom.Tex.loadFromFile("../Hunter/resources/mushroom.png");
     strA->mushroom.Sp.setTexture(strA->mushroom.Tex, true);
     strA->mushroom.x = 400;
     strA->mushroom.y = -10;

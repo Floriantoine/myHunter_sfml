@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** all.h
-*/
-
 #ifndef ALL_H
 #define ALL_H
 #include "anim_struc.hpp"

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** timer.c
-*/
-
 #include "../include/all.hpp"
 
 void time_out(param_t *params)

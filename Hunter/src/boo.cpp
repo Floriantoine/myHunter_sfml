@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** animation og boo
-*/
-
 #include "../include/all.hpp"
 
 void mouvboo(anim_t *strA, param_t *params)

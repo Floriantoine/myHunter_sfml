@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** evt_level1.c
-*/
-
 #include "../../include/all.hpp"
 
 void verif_grass(param_t *params, anim_t *strA)

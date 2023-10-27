@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** coin.c
-*/
-
 #include "../include/all.hpp"
 
 void sprite_coin(coin_t *coin, param_t *params)

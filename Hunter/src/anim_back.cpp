@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** anim_back.C
-*/
-
 #include "../include/all.hpp"
 
 void backcloud(lib_t *strG, param_t *params, anim_t *strA)

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** click_menu.c
-*/
-
 #include "../../include/all.hpp"
 
 void click_strat(mouse_t *mouse, param_t *params)

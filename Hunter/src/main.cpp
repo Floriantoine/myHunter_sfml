@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** main.c
-*/
-
 #include "../include/all.hpp"
 
 void init_tex_sp(lib_t *strG, anim_t *strA)
@@ -26,21 +19,21 @@ void init_params(param_t *params)
     params->mouse.y = 600;
     params->intro = 1;
     params->duel.on_off = 0;
-    params->font.loadFromFile("resources/arial.ttf");
+    params->font.loadFromFile("../Hunter/resources/arial.ttf");
     params->window =
         std::make_unique<sf::RenderWindow>(mode, "HUNTER", sf::Style::Default);
 }
 
 void init_sound(sound_t *sound)
 {
-    sound->mario.openFromFile("resources/mario.ogg");
-    sound->shoot.openFromFile("resources/shoot.ogg");
-    sound->reload.openFromFile("resources/sound/reload.ogg");
-    sound->death.openFromFile("resources/sound/death.ogg");
-    sound->level1.openFromFile("resources/sound/level1.ogg");
-    sound->explode.openFromFile("resources/explode.ogg");
-    sound->level.openFromFile("resources/level_sound.ogg");
-    sound->start.openFromFile("resources/sound/start.ogg");
+    sound->mario.openFromFile("../Hunter/resources/mario.ogg");
+    sound->shoot.openFromFile("../Hunter/resources/shoot.ogg");
+    sound->reload.openFromFile("../Hunter/resources/sound/reload.ogg");
+    sound->death.openFromFile("../Hunter/resources/sound/death.ogg");
+    sound->level1.openFromFile("../Hunter/resources/sound/level1.ogg");
+    sound->explode.openFromFile("../Hunter/resources/explode.ogg");
+    sound->level.openFromFile("../Hunter/resources/level_sound.ogg");
+    sound->start.openFromFile("../Hunter/resources/sound/start.ogg");
     sound->level1.setVolume(30);
 }
 

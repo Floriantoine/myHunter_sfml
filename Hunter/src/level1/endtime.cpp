@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** endtime.c
-*/
-
 #include "../../include/all.hpp"
 
 void end_score(param_t *params)

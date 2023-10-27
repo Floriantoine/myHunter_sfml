@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** double.c
-*/
-
 #include "../include/all.hpp"
 
 void print_double(param_t *params)

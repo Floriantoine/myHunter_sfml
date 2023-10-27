@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** duck->c
-*/
-
 #include "../include/all.hpp"
 
 void check_mvt(duck_t *duck)

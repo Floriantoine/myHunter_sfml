@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** struc.h
-*/
-
 #include "all.hpp"
 #include <SFML/Audio.hpp>
 

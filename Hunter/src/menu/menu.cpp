@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** menu.c
-*/
-
 #include "../../include/all.hpp"
 
 void menuback(lib_t *strG, param_t *params)

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** pipi_plaine_cloud.c
-*/
-
 #include "../include/all.hpp"
 
 void pipe(lib_t *strG, param_t *params)

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** open.c
-*/
-
 #include "../../include/all.hpp"
 
 void texte(param_t *params, int y, int trans)

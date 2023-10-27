@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** test.c
-*/
-
 #include "../include/all.hpp"
 
 void hit(lib_t *strG, param_t *params)

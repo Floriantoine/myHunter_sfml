@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** value.c
-*/
-
 #include "../include/all.hpp"
 
 void value(anim_t *strA, param_t *params)
 {
-    if (params->loop == 3){
+    if (params->loop == 3) {
         params->loop = 0;
         strA->grass.sp_pos = strA->grass.sp_pos + 200;
         if (strA->grass.sp_pos > 400) {
@@ -21,7 +14,7 @@ void value(anim_t *strA, param_t *params)
 
     if (strA->grass.y > 540 && strA->grass.loop == -1) {
         strA->grass.y = strA->grass.y - 1;
-    }else if (strA->grass.y < 740 && strA->grass.loop == 1) {
+    } else if (strA->grass.y < 740 && strA->grass.loop == 1) {
         strA->grass.y = strA->grass.y + 1;
         if (strA->grass.y >= 740)
             strA->grass.loop = -1;

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** evt.c
-*/
-
 #include "../../include/all.hpp"
 
 void key_press(param_t *params)

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** level1.c
-*/
-
 #include "../../include/all.hpp"
 
 void print_level1(param_t *params, lib_t *strG, anim_t *strA)

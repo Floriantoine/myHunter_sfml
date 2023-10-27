@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** life.c
-*/
-
 #include "../include/all.hpp"
 
 void dead_life(param_t *params, int a, int x, sf::Vector2f scale)

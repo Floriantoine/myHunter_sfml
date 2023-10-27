@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** randy.c
-*/
-
 #include "../include/all.hpp"
 
 int randy(int min, int max, int interdiction)

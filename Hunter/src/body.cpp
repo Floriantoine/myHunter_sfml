@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** sf::RenderWindow_pollEvent.c
-*/
-
 #include "../include/all.hpp"
 
 int body(param_t *params, lib_t *strG, sound_t *sound, anim_t *strA)

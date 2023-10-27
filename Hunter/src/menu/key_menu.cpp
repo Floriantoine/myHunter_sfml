@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** key_menu.c
-*/
-
 #include "../../include/all.hpp"
 
 void key_menu(param_t *params)

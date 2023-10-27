@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** mushroom->c
-*/
-
 #include "../include/all.hpp"
 
 void check_plat(mushroom_t *mushroom)

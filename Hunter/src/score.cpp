@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** delivery
-** File description:
-** score.c
-*/
-
 #include "../include/all.hpp"
 
 void more_one(anim_t *strA, param_t *params)
