@@ -1,4 +1,4 @@
-# myHunter_Csfml
+# myHunter_sfml
 
 ## Duck Hunt type game, in Csfml, created as part of a first year Epitech project.
 
@@ -25,7 +25,7 @@ start: `./build/Hunter/my_game`
 ---
 
 ## **MY_HUNTER**
-"Originally, this Epitech project aimed to create a game in C using the SFML graphics library. However, recently, I made the decision to migrate to C++ using the Csfml library. This transition was intended to simplify the game's launch process through CMake, while eliminating the need to install third-party dependencies. This decision improved the accessibility and portability of the game, while offering a smoother development experience."
+"Originally, this Epitech project aimed to create a game in C using the CSFML graphics library. However, recently, I made the decision to migrate to C++ using the sfml library. This transition was intended to simplify the game's launch process through CMake, while eliminating the need to install third-party dependencies. This decision improved the accessibility and portability of the game, while offering a smoother development experience."
 
 
 ![](https://github.com/Floriantoine/myHunter_Csfml/blob/master/Hunter/resources/github/ScreenshotHunter.png)
