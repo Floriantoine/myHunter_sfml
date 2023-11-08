@@ -15,19 +15,3 @@ void plaine(lib_t *strG, param_t *params)
     strG->plaine.Sp.setPosition(pos);
     params->window.get()->draw(strG->plaine.Sp);
 }
-
-void cloud(lib_t *strG, param_t *params)
-{
-    sf::Vector2f pos = {575, 320};
-    strG->cloud1.Sp.setTexture(strG->cloud1.Tex, true);
-    strG->cloud1.Sp.setPosition(pos);
-    params->window.get()->draw(strG->cloud1.Sp);
-    sf::Vector2f pos_one = {56, 22};
-    strG->cloud2.Sp.setTexture(strG->cloud2.Tex, true);
-    strG->cloud2.Sp.setPosition(pos);
-    params->window.get()->draw(strG->cloud2.Sp);
-    sf::Vector2f pos_two = {1523, 63};
-    strG->cloud3.Sp.setTexture(strG->cloud3.Tex, true);
-    strG->cloud3.Sp.setPosition(pos);
-    params->window.get()->draw(strG->cloud3.Sp);
-}

@@ -1,3 +1,7 @@
+#pragma once
+
+#include "Cloud.hpp"
+#include "Sound.hpp"
 #include "all.hpp"
 #include <SFML/Audio.hpp>
 
@@ -71,33 +75,6 @@ typedef struct
     int sp_pos;
     int x;
     int y;
-} cloud1_t;
-
-typedef struct
-{
-    sf::Sprite Sp;
-    sf::Texture Tex;
-    int sp_pos;
-    int x;
-    int y;
-} cloud2_t;
-
-typedef struct
-{
-    sf::Sprite Sp;
-    sf::Texture Tex;
-    int sp_pos;
-    int x;
-    int y;
-} cloud3_t;
-
-typedef struct
-{
-    sf::Sprite Sp;
-    sf::Texture Tex;
-    int sp_pos;
-    int x;
-    int y;
 } plaine_t;
 
 typedef struct
@@ -114,17 +91,18 @@ typedef struct
     mun_t mun;
     hit_t hit;
     plaine_t plaine;
-    cloud1_t cloud1;
-    cloud2_t cloud2;
-    cloud3_t cloud3;
+    Cloud cloud1;
+    Cloud cloud2;
+    Cloud cloud3;
     pipe_t pipe;
     menu_t menu;
 } lib_t;
 
 typedef struct
 {
-    sf::Music shoot;
-    sf::Music reload;
+    Sound shoot;
+    Sound reload;
+    Sound damage;
     sf::Music death;
     sf::Music level1;
     sf::Music deathtwo;

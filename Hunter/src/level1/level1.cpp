@@ -2,6 +2,7 @@
 
 void print_level1(param_t *params, lib_t *strG, anim_t *strA)
 {
+    sf::RenderWindow *window = params->window.get();
     backcloud(strG, params, strA);
     background(strG, params);
     score(params);
@@ -16,7 +17,9 @@ void print_level1(param_t *params, lib_t *strG, anim_t *strA)
     duck(strG, params, &strA->duck2);
     duck(strG, params, &strA->duck3);
     blood(strG, params, strA);
-    cloud(strG, params);
+    strG->cloud1.display(window);
+    strG->cloud2.display(window);
+    strG->cloud3.display(window);
     more_one(strA, params);
     print_double(params);
     hit(strG, params);
@@ -24,14 +27,9 @@ void print_level1(param_t *params, lib_t *strG, anim_t *strA)
 
 void reload_test(param_t *params, sound_t *sound, lib_t *strG, int time_mun)
 {
-    sf::SoundSource::Status could;
-    could = sound->reload.getStatus();
-
-    if (params->reload_shoot == 0 && could == 0 && time_mun > 1.5) {
+    if (params->reload_shoot == 0 && time_mun > 1) {
         sound->reload.play();
         strG->mun.clock.restart();
-    }
-    if (params->reload_shoot == 0 && time_mun > 0.5 && time_mun < 1.5) {
         params->reload_shoot = 3;
     }
 }
@@ -43,7 +41,8 @@ void sound_time(param_t *params, lib_t *strG, anim_t *strA, sound_t *sound)
     strG->mun.time_mun = strG->mun.clock.getElapsedTime();
     time_mun = strG->mun.time_mun.asSeconds();
     reload_test(params, sound, strG, time_mun);
-    if (sound->level1.getStatus() != 2 && params->level == 1)
+    if (sound->level1.getStatus() != sf::SoundSource::Status::Playing &&
+        params->level == 1)
         sound->level1.play();
     params->time = params->clock.getElapsedTime();
     out_time = params->time.asSeconds();

@@ -21,9 +21,11 @@ void open_level1(param_t *params, lib_t *strG, anim_t *strA, sound_t *sound)
     sound->level.play();
     params->intro = 0;
 
-    printf("CC\n");
     while (sound->level.getStatus() != 0) {
-        printf("CC1\n");
+        while (params->window.get()->pollEvent(params->event)) {
+            if (params->event.type == sf::Event::Closed)
+                sound->level.stop();
+        }
         y = y - 4.1;
         if (trans > 0 && y < 600)
             trans = trans - 1.25;

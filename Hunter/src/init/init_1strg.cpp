@@ -20,16 +20,6 @@ void back_int(lib_t *strG, std::string executablePath)
     strG->back.y1 = 1;
 }
 
-void cloud_init(lib_t *strG, std::string executablePath)
-{
-    strG->cloud1.Tex.loadFromFile(
-        executablePath + "../../Hunter/resources/cloud_one.png");
-    strG->cloud2.Tex.loadFromFile(
-        executablePath + "../../Hunter/resources/cloud_two.png");
-    strG->cloud3.Tex.loadFromFile(
-        executablePath + "../../Hunter/resources/cloud3.png");
-}
-
 void plaine_init(lib_t *strG, std::string executablePath)
 {
     strG->plaine.Tex.loadFromFile(
@@ -43,5 +33,4 @@ void init_1strg(lib_t *strG, std::string executablePath)
     plaine_init(strG, executablePath);
     explo_deco(strG, executablePath);
     back_int(strG, executablePath);
-    cloud_init(strG, executablePath);
 }

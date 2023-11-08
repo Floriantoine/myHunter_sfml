@@ -1,22 +1,21 @@
 #include "../include/all.hpp"
 
-void check_mvt(duck_t *duck)
+void check_mvt(duck_t *duck, param_t *params)
 {
-    if (duck->x + duck->mvt >= 1910)
+    sf::RenderWindow *window = params->window.get();
+    if (duck->x + duck->mvt >= window->getSize().x)
         duck->L_R = -1;
     if (duck->x + duck->mvt <= 10)
         duck->L_R = 1;
-    if (duck->y + duck->mvt >= 800)
+    if (duck->y + duck->mvt >= window->getSize().y)
         duck->U_D = -1;
     if (duck->y + duck->mvt <= 10)
         duck->U_D = 1;
-    if (duck->y > 1090)
-        duck->y = 400;
 }
 
-void mouvduck(duck_t *duck)
+void mouvduck(duck_t *duck, param_t *params)
 {
-    check_mvt(duck);
+    check_mvt(duck, params);
     if (duck->loop >= 40) {
         if (duck->type == 1) {
             duck->L_R = randy(-2, 2, 0);
@@ -35,9 +34,9 @@ void mouvduck(duck_t *duck)
 void sprite_duck(duck_t *duck, param_t *params)
 {
     if (params->loop == 3) {
-        duck->sp_pos = duck->sp_pos + 70;
+        duck->sp_pos += 1;
     }
-    if (duck->sp_pos > 300) {
+    if (duck->sp_pos == 5) {
         duck->sp_pos = 0;
     }
 }
@@ -45,28 +44,24 @@ void sprite_duck(duck_t *duck, param_t *params)
 void duck_draw(duck_t *duck, param_t *params)
 {
     sf::Vector2f pos = {duck->x, duck->y};
-    sf::IntRect rect = {duck->sp_pos, 0, 70, 300};
+    sf::IntRect rect = {duck->sp_pos * 70, 0, 50, 50};
     sf::Vector2f scale = {3, 3};
-    sf::Sprite sprite;
     sf::Texture texture;
 
     if (duck->L_R > 0) {
-        sprite = duck->Sp;
-        texture = duck->Tex;
+        duck->Sp.setTexture(duck->Tex, true);
     } else {
-        sprite = duck->SpL;
-        texture = duck->TexL;
+        duck->Sp.setTexture(duck->TexL, true);
     }
-    sprite.setTexture(texture, true);
-    sprite.setTextureRect(rect);
-    sprite.setPosition(pos);
-    sprite.setScale(scale);
-    params->window.get()->draw(sprite);
+    duck->Sp.setTextureRect(rect);
+    duck->Sp.setPosition(pos);
+    duck->Sp.setScale(scale);
+    params->window.get()->draw(duck->Sp);
 }
 
 void duck(lib_t *strG, param_t *params, duck_t *duck)
 {
     sprite_duck(duck, params);
-    mouvduck(duck);
+    mouvduck(duck, params);
     duck_draw(duck, params);
 }

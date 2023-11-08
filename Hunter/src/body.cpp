@@ -8,7 +8,7 @@ int body(param_t *params, lib_t *strG, sound_t *sound, anim_t *strA)
         if (params->level == 0)
             menu(params, strG, strA, sound);
         // if (params->intro != 0)
-        //     open_level1(params, strG, strA, sound);
+        // open_level1(params, strG, strA, sound);
         if (params->level == 1) {
             level1(params, strG, strA, sound);
         }

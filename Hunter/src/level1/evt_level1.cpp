@@ -23,14 +23,13 @@ void mouse_button(param_t *params, anim_t *strA, lib_t *strG, sound_t *sound)
     params->reload_shoot--;
     print_level1(params, strG, strA);
     params->verif = 0;
-    params->verif =
-        params->verif + verif_coord(&strA->duck1, strA, params, sound);
-    params->verif =
-        params->verif + verif_coord(&strA->duck2, strA, params, sound);
-    params->verif =
-        params->verif + verif_coord(&strA->duck3, strA, params, sound);
-    if (params->verif == 0)
+    params->verif += verif_coord(&strA->duck1, strA, strG, params, sound);
+    params->verif += verif_coord(&strA->duck2, strA, strG, params, sound);
+    params->verif += verif_coord(&strA->duck3, strA, strG, params, sound);
+    if (params->verif == 0) {
+        sound->damage.play();
         params->life.life--;
+    }
     verif_grass(params, strA);
     verif_coin(params, strA);
 }
@@ -42,7 +41,6 @@ void evt_key(param_t *params, anim_t *strA, lib_t *strG, sound_t *sound)
         pause_main(params, strG, sound);
     }
     if (params->event.key.code == sf::Keyboard::R) {
-        sound->reload.pause();
         params->reload_shoot = 0;
     }
     if (params->event.key.code == sf::Keyboard::X) {

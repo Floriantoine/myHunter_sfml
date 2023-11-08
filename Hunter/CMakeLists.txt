@@ -48,6 +48,8 @@ set(SRCS
   init/init_duck.cpp
   init/init_life.cpp
   init/init_mush.cpp
+  class/Cloud.cpp
+  class/Sound.cpp
 )
 
 list(TRANSFORM SRCS PREPEND ${SRC_DIR})

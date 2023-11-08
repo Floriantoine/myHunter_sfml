@@ -32,7 +32,6 @@ void mun(lib_t *strG, param_t *params, int mun);
 void hit(lib_t *strG, param_t *params);
 int randy(int main, int max, int interdiction);
 void explo(lib_t *strG, param_t *params, anim_t *strA);
-void cloud(lib_t *strG, param_t *params);
 void blood(lib_t *strG, param_t *params, anim_t *strA);
 void score(param_t *params);
 void grass(lib_t *strG, param_t *params, anim_t *strA);
@@ -46,6 +45,7 @@ void print_level1(param_t *params, lib_t *strG, anim_t *strA);
 void level1(param_t *params, lib_t *strG, anim_t *strA, sound_t *sound);
 // void level2(param_t *params, lib_t *strG, anim_t *strA, sound_t *sound);
 void backhouse(lib_t *strG, param_t *params, anim_t *strA);
-int verif_coord(duck_t *duck, anim_t *strA, param_t *params, sound_t *sound);
+int verif_coord(
+    duck_t *duck, anim_t *strA, lib_t *strG, param_t *params, sound_t *sound);
 void slowmo(param_t *params, lib_t *strG, anim_t *strA);
 #endif

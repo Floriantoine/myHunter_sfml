@@ -17,6 +17,12 @@ std::string getExecutablePath()
 
 void init_tex_sp(lib_t *strG, anim_t *strA, std::string executablePath)
 {
+    strG->cloud1 = Cloud(
+        {575, 320}, executablePath + "../../Hunter/resources/cloud_one.png");
+    strG->cloud2 = Cloud(
+        {56, 22}, executablePath + "../../Hunter/resources/cloud_two.png");
+    strG->cloud3 =
+        Cloud({1523, 63}, executablePath + "../../Hunter/resources/cloud3.png");
     init_1strg(strG, executablePath);
     init_2strg(strG, executablePath);
     init_1stra(strA, executablePath);
@@ -44,21 +50,24 @@ void init_sound(sound_t *sound, std::string executablePath)
 {
     sound->mario.openFromFile(
         executablePath + "../../Hunter/resources/mario.ogg");
-    sound->shoot.openFromFile(
-        executablePath + "../../Hunter/resources/shoot.ogg");
-    sound->reload.openFromFile(
-        executablePath + "../../Hunter/resources/sound/reload.ogg");
+    sound->shoot =
+        Sound(executablePath + "../../Hunter/resources/shoot.ogg", 120);
+    sound->damage =
+        Sound(executablePath + "../../Hunter/resources/damage.ogg", 10);
+    sound->reload =
+        Sound(executablePath + "../../Hunter/resources/sound/reload.ogg", 120);
     sound->death.openFromFile(
         executablePath + "../../Hunter/resources/sound/death.ogg");
     sound->level1.openFromFile(
         executablePath + "../../Hunter/resources/sound/level1.ogg");
+    sound->level1.setLoop(true);
     sound->explode.openFromFile(
         executablePath + "../../Hunter/resources/explode.ogg");
     sound->level.openFromFile(
         executablePath + "../../Hunter/resources/level_sound.ogg");
     sound->start.openFromFile(
         executablePath + "../../Hunter/resources/sound/start.ogg");
-    sound->level1.setVolume(30);
+    sound->level1.setVolume(10);
 }
 
 int main(int argc, char const *argv[])
